@@ -1,0 +1,35 @@
+package com.core;
+
+public class address {
+	private String city;
+	private String State;
+	
+	public address() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public address(String city, String state) {
+		super();
+		this.city = city;
+		State = state;
+	}
+
+	public String getCity() {
+		return city;
+	}
+
+	public void setCity(String city) {
+		this.city = city;
+	}
+
+	public String getState() {
+		return State;
+	}
+
+	public void setState(String state) {
+		State = state;
+	}
+	
+
+}
