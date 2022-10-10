@@ -16,7 +16,7 @@ public class jdbcDemo
 		Connection con = DriverManager.getConnection(url,user,pass);
 		Statement st=con.createStatement();
 		ResultSet rs=st.executeQuery("select * from employee");
-		int x=st.executeUpdate("insert into employee values('"+id+"','"+name+"','"+salary+"','"+dept+"')");
+		/*int x=st.executeUpdate("insert into employee values('"+id+"','"+name+"','"+salary+"','"+dept+"')");
 		if (x>0)
 		{
 			System.out.println("Insert successfull");
@@ -24,12 +24,12 @@ public class jdbcDemo
 		else
 		{
 			System.out.println("Insert failed");
-		}
-		/*while(rs.next())
+		}*/
+		while(rs.next())
 		{
 			rs.getInt("id");
 			System.out.println(rs.getLong("id") + "  " + rs.getString("name") + "  " + rs.getLong("salary") + "  " + rs.getString("dept"));
 		}
-		*/
+		
 	}
 }
